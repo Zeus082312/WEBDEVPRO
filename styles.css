@@ -1,0 +1,149 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    background: url('https://wallpaperaccess.com/full/4722382.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Days section styling */
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.day {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Day images styling */
+.day img {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 13px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.day h2 {
+    margin-top: 0;
+    color: #2196F3;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Canvas element for additional graphics */
+canvas {
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+    animation: expand 2s ease-in-out;
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 100%;
+        height: 100%;
+    }
+}
